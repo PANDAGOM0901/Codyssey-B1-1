@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- 외부 스타일시트 -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+ <!-- ========== HEADER / NAV ========== -->
+<header class="header" id="header">
+  <nav class="nav">
+    <div class="container nav__container">
+
+      <!-- 로고 -->
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-bracket">&lt;</span>
+        MyPortfolio
+        <span class="nav__logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- 데스크톱 메뉴 -->
+      <ul class="nav__menu" id="navMenu">
+        <li class="nav__item"><a href="#hero"     class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="#about"    class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#skills"   class="nav__link">Skills</a></li>
+        <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+        <li class="nav__item"><a href="#contact"  class="nav__link">Contact</a></li>
+      </ul>
+
+      <!-- 오른쪽 버튼 그룹 -->
+      <div class="nav__actions">
+        <!-- 다크모드 토글 -->
+        <button class="btn--icon" id="themeToggle" aria-label="다크 모드 토글">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+
+        <!-- 햄버거 버튼 (모바일) -->
+        <button class="btn--icon hamburger" id="hamburger"
+                aria-label="메뉴 열기" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+  <!-- ========== MAIN ========== -->
+  <main>
+
+   <!-- ── HERO 섹션 ── -->
+<section class="hero" id="hero">
+  <div class="hero__container container">
+
+    <!-- 왼쪽: 텍스트 영역 -->
+    <div class="hero__content">
+      <p class="hero__greeting">안녕하세요 👋</p>
+      <h1 class="hero__title">
+        저는 <span class="hero__name">최민채</span>입니다
+      </h1>
+      <p class="hero__subtitle">
+        <span id="typingText"></span><span class="cursor">|</span>
+      </p>
+      <p class="hero__description">
+        사용자 경험을 중시하는 프론트엔드 개발자입니다.<br />
+        깔끔한 코드와 직관적인 UI를 만드는 것을 좋아합니다.
+      </p>
+      <div class="hero__buttons">
+        <a href="#projects" class="btn btn--primary">프로젝트 보기</a>
+        <a href="#contact" class="btn btn--outline">연락하기</a>
+      </div>
+    </div>
+
+    <!-- 오른쪽: 이미지 영역 -->
+    <div class="hero__image-wrap">
+      <img src="images/profile.jpg" alt="프로필 사진" class="hero__image">
+    </div>
+
+  </div>
+
+  <!-- 스크롤 다운 화살표 -->
+  <a href="#about" class="hero__scroll-down" aria-label="아래로 스크롤">
+    <i class="fa-solid fa-chevron-down"></i>
+  </a>
+</section>
+    <!-- ── ABOUT 섹션 ── -->
+    <section class="about section" id="about">
+      <div class="container">
+        <h2 class="section__title">About Me</h2>
+        <p class="section__subtitle">저를 소개합니다</p>
+
+        <div class="about__content fade-in">
+          <!-- 프로필 이미지 -->
+          <div class="about__img-wrapper">
+            <img
+              src="images/profile.jpg"
+              alt="최민채 프로필 사진"
+              class="about__img"
+              onerror="this.src='https://via.placeholder.com/300x300?text=Profile'"
+            />
+          </div>
+
+          <!-- 자기소개 텍스트 -->
+          <div class="about__text">
+            <h3 class="about__name">최민채</h3>
+            <p class="about__role">Frontend Developer</p>
+            <p class="about__bio">
+              웹 개발에 열정을 가진 개발자입니다. HTML, CSS, JavaScript를
+              기반으로 사용자 친화적인 웹 서비스를 만드는 것을 목표로 합니다.
+              새로운 기술을 배우고 적용하는 것을 즐기며, 팀과 함께 성장하는
+              것을 중요하게 생각합니다.
+            </p>
+
+            <!-- 개인 정보 -->
+            <ul class="about__info">
+              <li class="about__info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>서울, 대한민국</span>
+              </li>
+              <li class="about__info-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span>chj0901@naver.com</span>
+              </li>
+              <li class="about__info-item">
+                <i class="fa-brands fa-github"></i>
+                <span>https://github.com/PANDAGOM0901</span>
+              </li>
+            </ul>
+
+            <a href="#contact" class="btn btn--primary">연락하기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS 섹션 ── -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <h2 class="section__title">Skills</h2>
+        <p class="section__subtitle">사용할 수 있는 기술들</p>
+
+        <div class="skills__grid">
+          <!-- Frontend -->
+          <article class="skills__category">
+            <h3 class="skills__category-title">
+              <i class="fa-solid fa-laptop-code"></i> Frontend
+            </h3>
+            <ul class="skills__list">
+              <li class="skills__item">
+                <span class="skills__name">HTML5</span>
+                <div class="skills__bar">
+                  <div class="skills__bar-fill" data-width="90"></div>
+                </div>
+                <span class="skills__percent">90%</span>
+              </li>
+              <li class="skills__item">
+                <span class="skills__name">CSS3</span>
+                <div class="skills__bar">
+                  <div class="skills__bar-fill" data-width="85"></div>
+                </div>
+                <span class="skills__percent">85%</span>
+              </li>
+              <li class="skills__item">
+                <span class="skills__name">JavaScript</span>
+                <div class="skills__bar">
+                  <div class="skills__bar-fill" data-width="80"></div>
+                </div>
+                <span class="skills__percent">80%</span>
+              </li>
+              <li class="skills__item">
+                <span class="skills__name">React</span>
+                <div class="skills__bar">
+                  <div class="skills__bar-fill" data-width="70"></div>
+                </div>
+                <span class="skills__percent">70%</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Tools -->
+          <article class="skills__category">
+            <h3 class="skills__category-title">
+              <i class="fa-solid fa-screwdriver-wrench"></i> Tools
+            </h3>
+            <ul class="skills__list">
+              <li class="skills__item">
+                <span class="skills__name">Git / GitHub</span>
+                <div class="skills__bar">
+                  <div class="skills__bar-fill" data-width="85"></div>
+                </div>
+                <span class="skills__percent">85%</span>
+              </li>
+              <li class="skills__item">
+                <span class="skills__name">VS Code</span>
+                <div class="skills__bar">
+                  <div class="skills__bar-fill" data-width="90"></div>
+                </div>
+                <span class="skills__percent">90%</span>
+              </li>
+              <li class="skills__item">
+                <span class="skills__name">Figma</span>
+                <div class="skills__bar">
+                  <div class="skills__bar-fill" data-width="65"></div>
+                </div>
+                <span class="skills__percent">65%</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Backend -->
+          <article class="skills__category">
+            <h3 class="skills__category-title">
+              <i class="fa-solid fa-server"></i> Backend
+            </h3>
+            <ul class="skills__list">
+              <li class="skills__item">
+                <span class="skills__name">Node.js</span>
+                <div class="skills__bar">
+                  <div class="skills__bar-fill" data-width="60"></div>
+                </div>
+                <span class="skills__percent">60%</span>
+              </li>
+              <li class="skills__item">
+                <span class="skills__name">Python</span>
+                <div class="skills__bar">
+                  <div class="skills__bar-fill" data-width="55"></div>
+                </div>
+                <span class="skills__percent">55%</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS 섹션 ── -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <h2 class="section__title">Projects</h2>
+        <p class="section__subtitle">GitHub 저장소</p>
+
+        <!-- 필터 버튼 (보너스) -->
+        <div class="projects__filters fade-in" id="projectFilters">
+        <button class="filter-btn active" data-lang="all">All</button>
+</div>
+
+        <!-- 프로젝트 카드 렌더링 영역 -->
+        <<div class="projects__grid fade-in" id="projectsGrid">
+          <!-- JS로 동적 렌더링 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT 섹션 ── -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <h2 class="section__title">Contact</h2>
+        <p class="section__subtitle">함께 일하고 싶으신가요?</p>
+
+        <div class="contact__content fade-in">
+
+          <!-- 연락처 정보 -->
+          <div class="contact__info">
+            <h3 class="contact__info-title">연락처 정보</h3>
+            <ul class="contact__list">
+              <li class="contact__item">
+                <i class="fa-solid fa-envelope contact__icon"></i>
+                <div>
+                  <p class="contact__label">이메일</p>
+                  <p class="contact__value">chj0901@naver.com</p>
+                </div>
+              </li>
+              <li class="contact__item">
+                <i class="fa-solid fa-location-dot contact__icon"></i>
+                <div>
+                  <p class="contact__label">위치</p>
+                  <p class="contact__value">서울, 대한민국</p>
+                </div>
+              </li>
+              <li class="contact__item">
+                <i class="fa-brands fa-github contact__icon"></i>
+                <div>
+                  <p class="contact__label">GitHub</p>
+                  <p class="contact__value">https://github.com/PANDAGOM0901</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 문의 폼 -->
+          <form class="contact__form fade-in" id="contactForm" novalidate>
+            <!-- 이름 -->
+            <div class="form__group">
+              <label for="name" class="form__label">이름 *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form__input"
+                placeholder="최민채"
+                autocomplete="name"
+              />
+              <p class="form__error" id="nameError"></p>
+            </div>
+
+            <!-- 이메일 -->
+            <div class="form__group">
+              <label for="email" class="form__label">이메일 *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form__input"
+                placeholder="chj0901@naver.com"
+                autocomplete="email"
+              />
+              <p class="form__error" id="emailError"></p>
+            </div>
+
+            <!-- 메시지 -->
+            <div class="form__group">
+              <label for="message" class="form__label">메시지 *</label>
+              <textarea
+                id="message"
+                name="message"
+                class="form__input form__textarea"
+                placeholder="안녕하세요! 협업 제안이 있습니다..."
+                rows="5"
+              ></textarea>
+              <p class="form__error" id="messageError"></p>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full">
+              <i class="fa-solid fa-paper-plane"></i> 메시지 보내기
+            </button>
+
+            <!-- 제출 성공 메시지 -->
+            <div class="form__success" id="formSuccess">
+              <i class="fa-solid fa-circle-check"></i>
+              메시지가 성공적으로 전송되었습니다! 빠른 시일 내에 답변드리겠습니다.
+            </div>
+          </form>
+        </div>
+             </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__content">
+
+        <!-- 로고 -->
+        <a href="#hero" class="nav__logo">
+          <span class="nav__logo-bracket">&lt;</span>
+          MyPortfolio
+          <span class="nav__logo-bracket">/&gt;</span>
+        </a>
+
+        <!-- 소셜 링크 -->
+        <ul class="footer__social">
+          <li>
+            <a
+              href="https://github.com/PANDAGOM0901"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub 프로필"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn 프로필"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:chj0901@naver.com"
+              aria-label="이메일 보내기"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+
+        <!-- 저작권 -->
+        <p class="footer__copy">
+          &copy; <span id="year"></span> 최민채. All rights reserved.
+        </p>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- 맨 위로 버튼 -->
+  <button class="scroll-top" id="scrollTop" aria-label="맨 위로 이동">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- 자바스크립트 -->
+  <script src="js/main.js"></script>
+</body>
+</html>
