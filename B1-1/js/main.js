@@ -57,7 +57,7 @@ function renderCards(repos) {
 fetchProjects();
 
 /* ── 타이핑 효과 ── */
-const typingTarget = document.querySelector('.hero__subtitle');
+const typingTarget = document.getElementById('typingText');
 const texts = [
   'Frontend Developer',
   'UI/UX Enthusiast',
@@ -124,7 +124,7 @@ themeToggle.addEventListener('click', () => {
 });
 
 /* ── 네비게이션 스크롤 효과 ── */
-const navbar = document.querySelector('.navbar');
+const navbar = document.querySelector('.nav');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
@@ -136,7 +136,7 @@ window.addEventListener('scroll', () => {
 
 /* ── 활성 메뉴 하이라이트 ── */
 const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-links a');
+const navLinks = document.querySelectorAll('.nav__link');
 
 window.addEventListener('scroll', () => {
   let current = '';
